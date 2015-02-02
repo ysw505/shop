@@ -1,0 +1,16 @@
+<div class="col-md-2">
+	<ul>
+		<li ng-repeat="category in categorys">
+			{{category.name}}
+			<ul ng-if="category.child != null ">	
+				<li ng-repeat="childCategory in category.child">
+					{{childCategory.name}}
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="col-md-10">
+<div ui-view></div>
+</div>
